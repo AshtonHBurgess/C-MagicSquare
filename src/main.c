@@ -33,7 +33,7 @@ int main(int argc, char *argv[]) {
                     strcpy(outOp, op1);
                 }//else if
                 else {
-                    printf("invalid op\n");
+                    fprintf( stderr,"invalid op\n");
                     err = 1;
                 }//else
             }//if
@@ -49,7 +49,7 @@ int main(int argc, char *argv[]) {
                     strcpy(outOp, op2);
                 }//else if
                 else {
-                    printf("invalid op\n");
+                    fprintf( stderr,"invalid op\n");
                     err = 1;
                 }//else
             }//else if
@@ -67,7 +67,7 @@ int main(int argc, char *argv[]) {
             strcpy(outFile, file1);
         }//else
         else {
-            printf("bad op ");
+            fprintf( stderr,"bad op ");
             err = 1;
         }//else
 //op + file 2
@@ -80,12 +80,12 @@ int main(int argc, char *argv[]) {
 
         }//else if
         else {
-            printf("bad op ");
+            fprintf( stderr,"bad op ");
             err = 1;
         }//else
 
         if ((inputFile = fopen(inFile, "r")) == NULL) {
-            printf("error: unable to open file!\n");
+            fprintf( stderr,"error: unable to open file!\n");
             err = 1;
         }//if
         else printf("Opened file successfully \n");
@@ -179,7 +179,7 @@ int main(int argc, char *argv[]) {
 
         // exiting program
         if (outGoingFile == NULL) {
-            printf("Error!");
+            fprintf( stderr,"Error!");
             exit(1);
         }//if
 
@@ -203,7 +203,7 @@ int main(int argc, char *argv[]) {
     }//if argc
     else if (argc != 5) {
         err = 1;
-        printf("Error: %d", err);
+        fprintf( stderr,"Error: %d", err);
     }//else if
     return err;
 }//end of main
