@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-
+#include "../inc/magicSquare.h"
 int main(int argc, char *argv[]) {
     setbuf(stdout,0);
     FILE *inputFile;
@@ -17,7 +17,7 @@ int main(int argc, char *argv[]) {
     char inFile[81];
     char outFile[81];
     char *lineToRead;
-    char line[256];
+    Line line;
     int count = 0;
     char array[10][81];  //temp array
 
@@ -125,13 +125,14 @@ int main(int argc, char *argv[]) {
                 count6++;
             }//for
         }//for
-
+       char magic[81];
+//        strcpy(magic,returnMagic(twoDMatrix,  rows, cols ));
         //For diagonal elements
         int isMagic;
         int sumDiag = 0;
         int sumRow = 0;
         int sumCol = 0;
-        char magic[81];
+      //  char magic[81];
         for (int q = 0; q < rows; q++) {
             for (int w = 0; w < cols; w++) {
                 if (q == w)
