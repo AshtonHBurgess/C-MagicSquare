@@ -33,7 +33,7 @@ int main(int argc, char *argv[]) {
                     strcpy(outOp, op1);
                 }//else if
                 else {
-                    fprintf( stderr,"invalid op\n");
+                    fprintf( stderr,"Invalid command line argument usage.");
                     err = 1;
                 }//else
             }//if
@@ -49,7 +49,7 @@ int main(int argc, char *argv[]) {
                     strcpy(outOp, op2);
                 }//else if
                 else {
-                    fprintf( stderr,"invalid op\n");
+                    fprintf( stderr,"Invalid command line argument usage.");
                     err = 1;
                 }//else
             }//else if
@@ -67,7 +67,7 @@ int main(int argc, char *argv[]) {
             strcpy(outFile, file1);
         }//else
         else {
-            fprintf( stderr,"bad op ");
+            fprintf( stderr,"Invalid command line argument usage.");
             err = 1;
         }//else
 //op + file 2
@@ -80,14 +80,14 @@ int main(int argc, char *argv[]) {
 
         }//else if
         else {
-            fprintf( stderr,"bad op ");
+            fprintf( stderr,"Invalid command line argument usage.");
             err = 1;
         }//else
 
         if ((inputFile = fopen(inFile, "r")) == NULL) {
-            fprintf( stderr,"error: unable to open file!\n");
+            fprintf( stderr,"Cannot open ./nonfolder/out1.txt for writing.");
             err = 1;
-        }//if
+        }//if f
         else printf("Opened file successfully \n");
 
         while (fgets(line, sizeof(line), inputFile)) {
