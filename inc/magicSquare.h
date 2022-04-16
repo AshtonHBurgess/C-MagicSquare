@@ -5,9 +5,10 @@
 #ifndef ASSIGN5_MAGICSQUARE_H
 #define ASSIGN5_MAGICSQUARE_H
 
-typedef char  Line[81];
+typedef char  BigChar[81];
+typedef char  LittleChar[4];
 
-char returnMagic( int **twoDMatrix, int rows, int cols );
+int ReturnMagic(  int rows, int cols, int **twoDMatrix);
 
 
 #endif //ASSIGN5_MAGICSQUARE_H
