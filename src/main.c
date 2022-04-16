@@ -203,7 +203,8 @@ int main(int argc, char *argv[]) {
     }//if argc
     else if (argc != 5) {
         err = 1;
-        fprintf( stderr,"Error: %d", err);
+//        fprintf( stderr,"Error: %d", err);
+        fprintf( stderr,"Invalid number of command line arguments.");
     }//else if
     return err;
 }//end of main
