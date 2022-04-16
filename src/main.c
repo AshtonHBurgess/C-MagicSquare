@@ -34,7 +34,8 @@ int main(int argc, char *argv[]) {
                 }//else if
                 else {
                     fprintf( stderr,"Invalid command line argument usage.");
-                    err = 1;
+//                    err = 1;
+                    exit(1);
                 }//else
             }//if
             else if (i == 2) {
@@ -50,7 +51,8 @@ int main(int argc, char *argv[]) {
                 }//else if
                 else {
                     fprintf( stderr,"Invalid command line argument usage.");
-                    err = 1;
+//                    err = 1;
+                    exit(1);
                 }//else
             }//else if
             else if (i == 4) {
@@ -68,7 +70,8 @@ int main(int argc, char *argv[]) {
         }//else
         else {
             fprintf( stderr,"Invalid command line argument usage.");
-            err = 1;
+//            err = 1;
+            exit(1);
         }//else
 //op + file 2
         if ((strcmp(op2, "-i")) == 0) {
@@ -81,12 +84,14 @@ int main(int argc, char *argv[]) {
         }//else if
         else {
             fprintf( stderr,"Invalid command line argument usage.");
-            err = 1;
+//            err = 1;
+            exit(1);
         }//else
 
         if ((inputFile = fopen(inFile, "r")) == NULL) {
             fprintf( stderr,"Cannot open %s for writing.", inFile);
-            err = 1;
+//            err = 1;
+            exit(1);
         }//if f
         //else printf("Opened file successfully \n");
 
@@ -180,7 +185,8 @@ int main(int argc, char *argv[]) {
         // exiting program
         if (outGoingFile == NULL) {
             fprintf( stderr,"Cannot open %s for writing.", outGoingFile);
-           err=1;
+            exit(1);
+//           err=1;
         }//if
 
         char endOfLine[3];
@@ -202,9 +208,10 @@ int main(int argc, char *argv[]) {
 
     }//if argc
     else if (argc != 5) {
-        err = 1;
+//        err = 1;
 //        fprintf( stderr,"Error: %d", err);
         fprintf( stderr,"Invalid number of command line arguments.");
+        exit(1);
     }//else if
     return err;
 }//end of main
