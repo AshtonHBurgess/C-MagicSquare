@@ -184,7 +184,7 @@ int main(int argc, char *argv[]) {
 
         // exiting program
         if (outGoingFile == NULL) {
-            fprintf( stderr,"Cannot open %s for writing.", outGoingFile);
+            fprintf( stderr,"Cannot open %s for writing.", outFile);
             exit(1);
 //           err=1;
         }//if
