@@ -88,7 +88,7 @@ int main(int argc, char *argv[]) {
             fprintf( stderr,"Cannot open %s for writing.", inFile);
             err = 1;
         }//if f
-        else printf("Opened file successfully \n");
+        //else printf("Opened file successfully \n");
 
         while (fgets(line, sizeof(line), inputFile)) {
             lineToRead = line;
