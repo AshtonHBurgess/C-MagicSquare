@@ -89,7 +89,7 @@ int main(int argc, char *argv[]) {
         }//else
 
         if ((inputFile = fopen(inFile, "r")) == NULL) {
-            fprintf( stderr,"Cannot open %s for writing.", inFile);
+            fprintf( stderr,"Cannot open %s for reading.", inFile);
 //            err = 1;
             exit(1);
         }//if f
