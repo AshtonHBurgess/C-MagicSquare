@@ -85,7 +85,7 @@ int main(int argc, char *argv[]) {
         }//else
 
         if ((inputFile = fopen(inFile, "r")) == NULL) {
-            fprintf( stderr,"Cannot open ./nonfolder/out1.txt for writing.");
+            fprintf( stderr,"Cannot open %s for writing.", inFile);
             err = 1;
         }//if f
         else printf("Opened file successfully \n");
@@ -179,8 +179,8 @@ int main(int argc, char *argv[]) {
 
         // exiting program
         if (outGoingFile == NULL) {
-            fprintf( stderr,"Error!");
-            exit(1);
+            fprintf( stderr,"Cannot open %s for writing.", outGoingFile);
+           err=1;
         }//if
 
         char endOfLine[3];
